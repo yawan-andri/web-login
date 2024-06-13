@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+  }
+
+
+.container {
+  position: relative;
+  height: 100vh;
+  /* background-image: url('../img/logo.png');
+  background-size: cover;
+  background-position: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+.box-login {
+  border: 1px solid #ccc;
+  width: 300px;
+  margin: 50px auto;
+  padding: 10px 20px;
+  border-radius: 3px;
+  box-shadow: 0px 0px 10px #ccc;
+  }
+.box-form input {
+  width: 100%;
+  padding: 10px;
+  font-size: 11pt;
+  box-sizing: border-box;
+  margin: 10px 0px;
+  }
+.box-form label {
+  font-weight: bold;
+  }
+.tombol-login {
+  background: #3131ff;
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0px;
+  border: 1px solid #3131ff;
+  border-radius: 3px;
+  color: white;
+  }
