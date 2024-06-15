@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Welcome!</title>
-  <link rel="stylesheet" href = "../css/navbar.css">
+    <title>Welcome!</title>
+    <?php include 'icon.php'; ?>
 </head>
 <body>
 

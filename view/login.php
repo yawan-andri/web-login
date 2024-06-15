@@ -44,7 +44,7 @@ if (isset($_SESSION['user_id'])) {
         <input type="password" name="password" id="password" placeholder="Masukkan password ..">
       </div>
       <input type="checkbox" onclick="showHide()"> Tampilkan Password 
-      <input type="submit" value="LOGIN" class="tombol-login" name="login">
+      <input type="submit" value="LOGIN" class="tombol-login" id="loginButton" name="login">
     </form>
   </div>
 </div>
