@@ -1,43 +1,58 @@
-<!DOCTYPE html>
-<html>
-<head>
-	<title>IC</title>
-	<link rel="stylesheet" href="../css/navbar.css">
-	<link rel="shortcut icon" href="../img/logo.png" type="image/x-icon">
-</head>
-<body>
-	<?php
+<?php
 	// Start the session (if not already started)
 	session_start();
-	?>
+?>
 
-
-	<header class="header">
-		<div class="menu-navbar">
-			<ul>
-				<li><a href="index.php">Home</a></li>
-				<li class="dropdown"><a href="#">Menu 1</a>
-					<ul class="isi-dropdown">
-						<li><a href="#">Sub Menu 1</a></li>
-						<li><a href="#">Sub Menu 2</a></li>
-						<li><a href="#">Sub Menu 3</a></li>
-						<li><a href="#">Sub Menu 4</a></li>
-					</ul>
-				</li>
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <title> IC </title>
+    <link rel="stylesheet" href="../css/navbar.css">
+    <!-- Boxicons CDN Link -->
+    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <nav>
+        <div class="navbar">
+        <i class='bx bx-menu'></i>
+        <div class="logo"><a href="#">IC</a></div>
+        <div class="nav-links">
+            <div class="sidebar-logo">
+                <span class="logo-name">INTERNAL CONTROL</span>
+                <i class='bx bx-x' ></i>
+            </div>
+            <ul class="links">
+                <li><a href="#">HOME</a></li>
+                <li>
+                    <a href="#">SOP</a>
+                    <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                    <ul class="js-sub-menu sub-menu">
+                        <li><a href="#">MASTER</a></li>
+                        <li><a href="#">SOLUSI MASALAH</a></li>
+                    </ul>
+                </li> 
 				<?php
 				// Conditional Logout/Login Link
 				if (isset($_SESSION['user_id'])) {
-					echo "<li><a href='logout.php'>Logout</a></li>";
+                    $user_name = $_SESSION['user_name'];  // Fucntiom to display username
 
-					$user_name = $_SESSION['user_name'];  // Fucntiom to display username
-					echo "<li><a href='#'> $user_name </a></li>";  // Display username
+                    echo "<li>
+                            <a href='#'> Hello, $user_name </a>
+                            <i class='bx bxs-chevron-down js-arrow arrow'></i>
+                            <ul class='js-sub-menu sub-menu'>
+                                <li><a href='logout.php'>Logout</a></li>
+                            </ul>
+                        </li>";
 				} else {
 					echo "<li><a href='login.php'>Login</a></li>";
 				}
 				?>
-			</ul>
-		</div>
-	</header>
-<br/>
+            </ul>
+        </div>
+        </div>
+    </nav>
+    <script src="../js/navbar.js"></script>
 </body>
 </html>
