@@ -22,7 +22,7 @@ if (isset($_POST['login'])) {
     echo "Error executing query: " . mysqli_error($conn);
     exit;
   } else if (mysqli_num_rows($result) === 0) {
-    session_start();
+    // session_start();
     // echo "<p style='color: red;'>Invalid username or password.</p>";
     
     // Set failed login session variable
