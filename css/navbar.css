@@ -15,8 +15,10 @@ nav{
   left: 0;
   width: 100%;
   height: 100%;
-  height: 70px;
-  background: #ffffff;
+  /* height: 70px; */
+  height: 50px;
+  /* background: #3E8DA8; */
+  background: #fff;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   z-index: 99;
 }
@@ -33,12 +35,14 @@ nav .navbar{
 }
 .navbar .logo a{
   font-size: 30px;
-  color: #fff;
+  /*color: #fff;*/
+  color: black;
   text-decoration: none;
   font-weight: 600;
 }
 nav .navbar .nav-links{
-  line-height: 70px;
+  /* line-height: 50px; */
+  line-height: 50px;
   height: 100%;
 }
 nav .navbar .links{
@@ -56,7 +60,8 @@ nav .navbar .links li a{
   height: 100%;
   text-decoration: none;
   white-space: nowrap;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
   font-size: 15px;
   font-weight: 500;
 }
@@ -69,20 +74,24 @@ nav .navbar .links li .arrow{
   /* background: red; */
   height: 100%;
   width: 22px;
-  line-height: 70px;
+  /* line-height: 70px; */
+  line-height: 50px;
   text-align: center;
   display: inline-block;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
   transition: all 0.3s ease;
 }
 nav .navbar .links li .sub-menu{
   position: absolute;
-  top: 70px;
+  /* top: 70px; */
+  top: 50px;
   left: 0;
   line-height: 40px;
-  background: #ffffff;
+  /* background: #3E8DA8; */
+  background: white;
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  border-radius: 0 0 4px 4px;
+  border-radius: 4px 4px 4px 4px;
   display: none;
   z-index: 2;
 }
@@ -95,17 +104,17 @@ nav .navbar .links li:hover .js-sub-menu{
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 .navbar .links li .sub-menu a{
-  color: #fff;
+  /* color: #fff; */
+  color: black;
   font-size: 15px;
   font-weight: 500;
 }
 .navbar .links li .sub-menu .more-arrow{
   line-height: 40px;
 }
-/*.navbar .links li .htmlCss-more-sub-menu{
-   line-height: 40px; 
-}*/
-
+/* .navbar .links li .htmlCss-more-sub-menu{
+  line-height: 40px; 
+} */
 .navbar .links li .sub-menu .more-sub-menu{
   position: absolute;
   top: 0;
@@ -119,7 +128,7 @@ nav .navbar .links li:hover .js-sub-menu{
 }
 .navbar .search-box{
   position: relative;
-   height: 40px;
+  height: 40px;
   width: 40px;
 }
 .navbar .search-box i{
@@ -129,7 +138,8 @@ nav .navbar .links li:hover .js-sub-menu{
   line-height: 40px;
   text-align: center;
   font-size: 22px;
-  color: #fff;
+  /* color: #fff; */
+  color: black;
   font-weight: 600;
   cursor: pointer;
   transition: all 0.3s ease;
@@ -140,7 +150,7 @@ nav .navbar .links li:hover .js-sub-menu{
   top: 80px;
   height: 60px;
   width: 300px;
-  background: #ffffff;
+  background: #3E8DA8;
   border-radius: 6px;
   opacity: 0;
   pointer-events: none;
@@ -150,14 +160,14 @@ nav .navbar .links li:hover .js-sub-menu{
   top: 65px;
   opacity: 1;
   pointer-events: auto;
-  background: #ffffff;
+  background: #3E8DA8;
 }
 .search-box .input-box::before{
   content: '';
   position: absolute;
   height: 20px;
   width: 20px;
-  background: #ffffff;
+  background: #3E8DA8;
   right: 10px;
   top: -6px;
   transform: rotate(45deg);
@@ -198,9 +208,10 @@ nav .navbar .links li:hover .js-sub-menu{
     font-size: 15px;
   }
 }
+
 @media (max-width:800px){
-  /* nav {
-      position: relative; 
+  /* nav{
+    position: relative; 
   } */
   .navbar .bx-menu{
     display: block;
@@ -212,7 +223,7 @@ nav .navbar .links li:hover .js-sub-menu{
     display: block;
     max-width: 270px;
     width: 100%;
-    background:  #ffffff;
+    background:  #3E8DA8;
     line-height: 40px;
     padding: 20px;
     box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);

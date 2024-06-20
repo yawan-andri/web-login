@@ -1,0 +1,37 @@
+h1 {
+    text-align: center;
+    margin-top: 70px;
+}
+table {
+    border-collapse: collapse; /* Ensures borders around the entire table */
+    border-width: 50px;
+    margin: 20px;
+}
+th, td {
+    border: 1px solid black; /* Adds 1px black border to table cells */
+    padding: 5px; /* Adds padding for better readability */
+    text-align: center;
+    width: 200px;
+}
+
+.isi:hover{
+    background: rgba(0,0,0,0.05);
+}
+
+th:nth-child(1), td:nth-child(1) { width: 10px; }
+
+/* th:nth-child(1), td:nth-child(1) { width: 200px; } 
+th:nth-child(2), td:nth-child(2) { width: 200px; } 
+th:nth-child(3), td:nth-child(3) { width: 200px; } 
+th:nth-child(4), td:nth-child(4) { width: 200px; }
+th:nth-child(5), td:nth-child(5) { width: 200px; } 
+th:nth-child(6), td:nth-child(6) { width: 200px; }  */ 
+
+.fas {
+    filter: brightness(0.5); /* Adjust brightness (0 to 1) */
+    filter:opacity(0.5);
+}
+
+.fas:hover {
+    background: rgba(64, 224, 208,0.5);
+}

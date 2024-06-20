@@ -16,41 +16,41 @@
 <body>
     <nav>
         <div class="navbar">
-        <i class='bx bx-menu'></i>
-        <div class="logo"><a href="#">IC</a></div>
-        <div class="nav-links">
-            <div class="sidebar-logo">
-                <span class="logo-name">INTERNAL CONTROL</span>
-                <i class='bx bx-x' ></i>
+            <i class='bx bx-menu'></i>
+            <div class="logo"><a href="index.php">IC</a></div>
+            <div class="nav-links">
+                <div class="sidebar-logo">
+                    <span class="logo-name">INTERNAL CONTROL</span>
+                    <i class='bx bx-x' ></i>
+                </div>
+                <ul class="links">
+                    <li><a href="index.php">HOME</a></li>
+                    <li>
+                        <a href="#">SOP</a>
+                        <i class='bx bxs-chevron-down js-arrow arrow '></i>
+                        <ul class="js-sub-menu sub-menu">
+                            <li><a href="#">MASTER</a></li>
+                            <li><a href="#">SOLUSI MASALAH</a></li>
+                        </ul>
+                    </li> 
+                    <?php
+                    // Conditional Logout/Login Link
+                    if (isset($_SESSION['user_id'])) {
+                        $user_name = $_SESSION['user_name'];  // Fucntiom to display username
+                        echo "<li>
+                                <a href='#'> Hello, $user_name </a>
+                                <i class='bx bxs-chevron-down js-arrow arrow'></i>
+                                <ul class='js-sub-menu sub-menu'>
+                                    <li><a href='#'>Setting Password</a></li>
+                                    <li><a href='logout.php'>Logout</a></li>
+                                </ul>
+                            </li>";
+                    } else {
+                        echo "<li><a href='login.php'>Login</a></li>";
+                    }
+                    ?>
+                </ul>
             </div>
-            <ul class="links">
-                <li><a href="#">HOME</a></li>
-                <li>
-                    <a href="#">SOP</a>
-                    <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                    <ul class="js-sub-menu sub-menu">
-                        <li><a href="#">MASTER</a></li>
-                        <li><a href="#">SOLUSI MASALAH</a></li>
-                    </ul>
-                </li> 
-				<?php
-				// Conditional Logout/Login Link
-				if (isset($_SESSION['user_id'])) {
-                    $user_name = $_SESSION['user_name'];  // Fucntiom to display username
-
-                    echo "<li>
-                            <a href='#'> Hello, $user_name </a>
-                            <i class='bx bxs-chevron-down js-arrow arrow'></i>
-                            <ul class='js-sub-menu sub-menu'>
-                                <li><a href='logout.php'>Logout</a></li>
-                            </ul>
-                        </li>";
-				} else {
-					echo "<li><a href='login.php'>Login</a></li>";
-				}
-				?>
-            </ul>
-        </div>
         </div>
     </nav>
     <script src="../js/navbar.js"></script>
