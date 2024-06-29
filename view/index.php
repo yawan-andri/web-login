@@ -56,7 +56,17 @@
                             echo "<a href='../func/edit.php?notrans=" . $row['notrans'] . "'><i class='fas fa-edit'></i></a> | ";
                             echo "<a href='../func/delete_audit.php?notrans=" . $row['notrans'] . "' onclick='return confirmDelete()'><i class='fas fa-trash'></i></a> | ";                                                 
                             echo "<a href='../pdf/pdf_audit.php?notrans=" . $row['notrans'] . "'><i class='fas fa-print'></i></a>";                            
-                        echo "</td>";
+                            
+                            echo "<form action='../func/delete_audit.php' method='post'>";
+                            echo    "<input type='hidden' name='notrans' value='" . $row['notrans'] . "'>";
+                            echo    "<input type='hidden' name='jenis' value='audit'>";
+                            echo    "<button type='submit' onclick='return confirmDelete()'>";
+                            echo        "<i class='fas fa-trash'></i>";
+                            echo    "</button>";
+                            echo "</form>";
+                        
+                        
+                            echo "</td>";
                         echo "</tr>";
                     }
                     echo "</table>";
@@ -80,6 +90,7 @@
             exit; // Exit script after redirect
         }
         ?>
+
     <script src="../js/delete.js"></script>
 </body>
 </html>
