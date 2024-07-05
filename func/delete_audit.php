@@ -6,7 +6,7 @@ include_once '../conn/conn.php'; // Include your database connection file
     // Check if the request method is POST (form submission)
     if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         // Check if the required ID is provided
-        if (isset($_POST['jenis']) && $_POST['jenis'] === 'audit') {
+        if (isset($_POST['jenis']) && $_POST['jenis'] === 'delete') {
             if (isset($_POST['notrans'])) {
                 $notrans = mysqli_real_escape_string($conn, $_POST['notrans']); // Sanitize input
 

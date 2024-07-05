@@ -5,54 +5,68 @@
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
-<head>
-    <meta charset="UTF-8">
-    <title> IC </title>
-    <link rel="stylesheet" href="../css/navbar.css">
-    <!-- Boxicons CDN Link -->
-    <link href='https://unpkg.com/boxicons@2.0.7/css/boxicons.min.css' rel='stylesheet'>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-</head>
-<body>
-    <nav>
-        <div class="navbar">
-            <i class='bx bx-menu'></i>
-            <div class="logo"><a href="index.php">IC</a></div>
-            <div class="nav-links">
-                <div class="sidebar-logo">
-                    <span class="logo-name">INTERNAL CONTROL</span>
-                    <i class='bx bx-x' ></i>
+    <head>
+        <title>Bootstrap Example</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+        <!--<script src="https://www.kryogenix.org/code/browser/sorttable/sorttable.js"></script>-->
+    </head>
+    <body>
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>  
+                        <span class="icon-bar"></span>                        
+                    </button>
+                <a class="navbar-brand" href="index.php">Internal Control</a>
                 </div>
-                <ul class="links">
-                    <li><a href="index.php">HOME</a></li>
-                    <li>
-                        <a href="#">SOP</a>
-                        <i class='bx bxs-chevron-down js-arrow arrow '></i>
-                        <ul class="js-sub-menu sub-menu">
-                            <li><a href="#">MASTER</a></li>
-                            <li><a href="#">SOLUSI MASALAH</a></li>
+                <div class="collapse navbar-collapse" id="myNavbar">
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.php">Home</a></li>
+                        <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Master<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">SOP</a></li>
+                            <li><a href="#">SKB</a></li>
+                            <li><a href="#">DAS</a></li>
+                            <li><a href="#">Panduan</a></li>
                         </ul>
-                    </li> 
-                    <?php
-                    // Conditional Logout/Login Link
-                    if (isset($_SESSION['user_id'])) {
-                        $user_name = $_SESSION['user_name'];  // Fucntiom to display username
-                        echo "<li>
-                                <a href='#'> Hello, $user_name </a>
-                                <i class='bx bxs-chevron-down js-arrow arrow'></i>
-                                <ul class='js-sub-menu sub-menu'>
-                                    <li><a href='#'>Setting Password</a></li>
-                                    <li><a href='logout.php'>Logout</a></li>
-                                </ul>
-                            </li>";
-                    } else {
-                        echo "<li><a href='login.php'>Login</a></li>";
-                    }
-                    ?>
-                </ul>
+                        </li>
+                        <li class="dropdown">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="#">Transaksi<span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="audit.php">Audit</a></li>
+                            <li><a href="#">Audit Digital</a></li>
+                            <li><a href="#">Control BAPT</a></li>
+                            <li><a href="#">Evaluasi Manager</a></li>
+                        </ul>
+                        </li>
+                        <li><a href="#">Laporan</a></li>
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <li class="dropdown">
+                        <?php
+                            if (isset($_SESSION['user_id'])) {
+                                $user_name = $_SESSION['user_name'];  // Fucntiom to display username
+                                echo    "<a class='dropdown-toggle' data-toggle='dropdown' href='#'>Halo, $user_name<span class='caret'></span></a>
+                                        <ul class='dropdown-menu'>
+                                            <li><a href='#'>Setting Password</a></li>
+                                            <li><a href='logout.php'>Log Out</a></li>
+                                        </ul>";
+                            } else {
+                                echo "<li><a href='login.php'>Login</a></li>";
+                            }           
+                        ?>
+                        </li>
+                    </ul>
+                </div>
             </div>
-        </div>
-    </nav>
-    <script src="../js/navbar.js"></script>
-</body>
+        </nav>
+    </body>
 </html>
